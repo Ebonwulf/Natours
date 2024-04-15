@@ -59,8 +59,8 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
-  -webkit-background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text; //clips the background to just around the text
+  color: transparent; //needed to allow the background-image to be visible, so that the colour gradient is then visible as the text rather than the current text colour.
   letter-spacing: 0.2rem;
   transition: all 0.2s;
 
