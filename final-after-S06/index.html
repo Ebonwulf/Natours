@@ -112,6 +112,7 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+              <!--By adding the px width after each image in the srcset attribute, we are informing the browser of the width of each image. So 300px would be written as 300w. This is called a width descriptor. It then requires the size attribute, so that it can inform the browser which image to use based on the current viewport width. To calc the vw divide the width of the image (when in the inspector of a browser, at the max-width selected, and divide it by the max-width , then * by 100 to get the %. eg 170px img width / by 900px and * 100, is 20%. So the vw should be 20). once you have entered all the max-width and the vw requirements, you need then need to add a default size, eg   300px. src should still be used incase a browser doesn't recognise srcset.-->
               <img
                 srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
@@ -443,6 +444,7 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
+        <!--the picture element is used for art direction. This tells the browser which image to use based on screen size. It requires 0 or more source elements (but 0 makes no sense), and at least one image element. you can use the 1x and 2x in the srcset as well so that it will change based on the screen resolution as well as the screen size.-->
         <picture class="footer__logo">
           <source
             srcset="
@@ -450,6 +452,7 @@
               img/logo-green-small-2x.png 2x
             "
             media="(max-width: 37.5em)" />
+          <!--The srcset property in the below img element allows you to set multiples of the same image, that have different px sizes. The 1x and 2x after each img is the density discriptor, this allows the browser to choose the best of the 2 images based on screen density.-->
           <img
             srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
             alt="Full logo"

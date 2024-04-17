@@ -15,7 +15,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     height: 95vh;
   }
-
+  //this media query tell the browser to use the larger version of the image if the dpi(dots per inch) is greater than 192 and the width is greater that 37.5em. Adding the min-width for the screen makes sure that when viewed on a small device, such as a phone, the smaller picture is used. This is because phones have high density screens, making it always load the larger image, which we don't want it to do.
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
